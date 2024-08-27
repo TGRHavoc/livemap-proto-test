@@ -1,0 +1,20 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "build:proto": "protoc --ts_out src\\gen --proto_path proto .\\proto\\*.proto"
+  },
+  "devDependencies": {
+    "@protobuf-ts/plugin": "^2.9.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "@protobuf-ts/runtime": "^2.9.3"
+  }
+}

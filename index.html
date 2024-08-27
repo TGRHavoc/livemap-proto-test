@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <!-- Player template for displaying Name, Position, Identifiers, Metadata -->
+    <template id="player-template">
+        <div data-player-internal-id="" class="player">
+          <h2 class="player-name"></h2>
+        </div>
+    </template>
+
+    <!-- Template for position -->
+    <template id="position-template">
+      <div class="position">
+        <p>X: <span data-position="x" class="position-x"></span></p>
+        <p>Y: <span data-position="y" class="position-y"></span></p>
+        <p>Z: <span data-position="z" class="position-z"></span></p>
+      </div>
+    </template>
+
+    <!-- Template for Identifiers -->
+    <template id="identifier-template">
+      <div class="identifiers">
+        <p style="display: none;" data-identifier="steam">Steam: <span class="identifier"></span></p>
+        <p style="display: none;" data-identifier="license">License: <span class="identifier"></span></p>
+        <p style="display: none;" data-identifier="discord">Discord: <span class="identifier"></span></p>
+        <p style="display: none;" data-identifier="xbl">XBL: <span class="identifier"></span></p>
+        <p style="display: none;" data-identifier="live">LiveID: <span class="identifier"></span></p>
+        <p style="display: none;" data-identifier="ip">IP: <span class="identifier"></span></p>
+      </div>
+      </template>
+
+  </body>
+</html>

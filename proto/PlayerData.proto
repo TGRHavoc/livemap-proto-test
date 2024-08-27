@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "google/protobuf/struct.proto";
+
+message PlayerUpdate {
+    int32 id = 1;
+    PlayerData data = 2;
+
+    message PlayerData {
+        optional string name = 1;
+        optional Vec3 position = 2;
+        map<string, google.protobuf.Value> identifiers = 3;
+        map<string, google.protobuf.Value> metadata = 4;
+    }
+
+    message Vec3 {
+        float x = 1;
+        float y = 2;
+        float z = 3;
+    }
+}
+
+message PlayerLeft {
+    int32 id = 1;
+}
